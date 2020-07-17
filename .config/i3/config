@@ -201,7 +201,7 @@ bindsym $mod+shift+x exec i3lock
  bindsym XF86AudioPrev exec playerctl previous
 
 # Wallpaper definieren
-exec_always feh --bg-fill /home/jape/Bilder/wallpaper.jpg
+# exec_always feh --bg-fill /home/jape/Bilder/wallpaper.jpg
 
 # Touchpad deaktivieren
 # exec_alwayssynclient TouchpadOff=1
@@ -210,18 +210,22 @@ exec_always feh --bg-fill /home/jape/Bilder/wallpaper.jpg
 new_window 1pixel
 
 # Dropbox starten
-exec_always dropbox start
+# exec_always dropbox start
 
 # urxvt-Daemon starten
 # exec_always urxvtd -f
 
 # Internen und Externen Bildschirm switchen
 # exec_always /home/jape/scripts/toogle-screen.sh
-bindsym $mod+t exec --no-startup-id /usr/local/bin/toogle-screen
+# bindsym $mod+t exec --no-startup-id /usr/local/bin/toogle-screen
 
 # Network-Manager Applet starten
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
 
 # FluxGui starten
-exec fluxgui
+# exec fluxgui
+
+exec_always "xrandr --auto"
+exec_always "xrandr --output VGA-1 --left-of VGA-2"
+
